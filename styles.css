@@ -70,7 +70,7 @@ a {
   position: absolute;
   z-index: 4;
   left: 50%;
-  bottom: 8.2%;
+  bottom: 19.2%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -982,7 +982,7 @@ footer strong {
   }
 
   .hero-whatsapp-cta {
-    bottom: 12.6%;
+    bottom: 19.6%;
     width: min(350px, 74%);
     min-height: 48px;
     font-size: clamp(18px, 5vw, 22px);
