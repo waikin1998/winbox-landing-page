@@ -1102,3 +1102,35 @@ footer strong {
     right: 20px;
   }
 }
+
+.hero-whatsapp-cta {
+  bottom: 1.7%;
+  width: min(470px, 82%);
+  min-height: clamp(54px, 10.5vw, 78px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  font-size: 0;
+  text-shadow: none;
+  animation: none;
+}
+
+.hero-whatsapp-cta:hover {
+  filter: none;
+}
+
+.hero-whatsapp-cta::before,
+.hero-whatsapp-cta::after {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .hero-whatsapp-cta {
+    bottom: 1.7%;
+    width: min(330px, 82%);
+    min-height: 52px;
+    box-shadow: none;
+  }
+}
