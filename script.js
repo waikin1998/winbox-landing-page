@@ -7,13 +7,24 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-document.querySelectorAll('a[href*="tinyurl.com/warb01"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    if (typeof window.fbq !== "function") return;
+const META_EVENT_DELAY_MS = 2000;
 
-    window.fbq("track", "CompleteRegistration", {
-      content_name: "CTA Button",
-      destination_url: link.href
-    });
+document.querySelectorAll('a[href*="tinyurl.com/warb01"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (link.dataset.metaEventPending === "true") return;
+    link.dataset.metaEventPending = "true";
+
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "CompleteRegistration", {
+        content_name: "CTA Button",
+        destination_url: link.href
+      });
+    }
+
+    window.setTimeout(() => {
+      window.location.href = link.href;
+    }, META_EVENT_DELAY_MS);
   });
 });
