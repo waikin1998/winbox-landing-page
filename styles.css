@@ -630,6 +630,12 @@ a {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .real-cta {
+    animation: none;
+  }
+}
+
 .real-cta span {
   font-size: clamp(11px, 2.7vw, 14px);
 }
