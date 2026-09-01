@@ -597,35 +597,29 @@ a {
 .real-cta {
   position: absolute;
   z-index: 2;
-  left: 10.5%;
-  bottom: 7%;
-  min-width: min(168px, 30%);
-  min-height: 34px;
-  padding: 4px 15px 5px;
+  left: 50%;
+  bottom: 4%;
+  min-width: min(132px, 26%);
+  min-height: 28px;
+  padding: 3px 10px 4px;
   border-width: 2px;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow:
     inset 0 -2px 0 rgba(133, 82, 0, 0.25),
     0 2px 0 #ac710b,
-    0 7px 12px rgba(0, 23, 51, 0.2);
-}
-
-.reward-item-1 .real-cta {
-  bottom: 7.5%;
-}
-
-.reward-item-5 .real-cta {
-  bottom: 6.5%;
+    0 5px 9px rgba(0, 23, 51, 0.18);
+  animation: none;
+  transform: translateX(-50%);
 }
 
 .real-cta span {
-  font-size: clamp(13px, 3.2vw, 17px);
+  font-size: clamp(11px, 2.7vw, 14px);
 }
 
 .real-cta small {
   margin-top: 0;
-  font-size: 6px;
-  letter-spacing: 1.4px;
+  font-size: 5px;
+  letter-spacing: 1.1px;
 }
 
 
